@@ -1,19 +1,65 @@
-use std::{env, process};
-use sha2::{Sha256, Digest};
-use std::fs;
-use walkdir::WalkDir;
-use std::collections::HashMap;
+use clap::{Parser,ValueEnum};
+use std::env;
+use std::ffi::OsString;
 
+#[derive(Debug, Clone, ValueEnum)]
+enum ScanLevel {
+    QuickScan,
+    FullScan,
+    CustomScan,
+}
+
+#[derive(Debug,Clone,ValueEnum)]
+enum Speed{
+    Slow,
+    Medium,
+    Fast
+}
+
+#[derive(Parser)]
+struct Args{
+   #[arg(
+        short = 'f',
+        long = "folder",
+        help = "Directory to scan (default: current directory)",
+        default_value_os_t = get_current_dir()  // Use default_value_os_t
+    )]
+    folder: OsString, 
+
+    #[arg(short='l',long="level",help="quick-scan, full-scan, custom-scan",default_value="full-scan")]
+    scan_level: ScanLevel,
+
+    #[arg(short='s',long="speed",help="Scan speed: slow, medium, or fast",default_value="medium")]
+    speed:Speed 
+}
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    // let currentDir=env::current_dir().expect("failed to get current directory");
+    let args=Args::parse();
 
-    if args.len() < 2 {
-        eprintln!("Usage: {} <directory>", args[0]);
-        process::exit(1);
-    }
+    let dir=args.folder;
+    let speed=args.speed;
+    let scan=args.scan_level;
 
+    println!("{:?}",dir.into_string());
+    println!("{:?}",speed);
+    println!("{:?}",scan);
+    
+}
 
-    let dir = &args[1];
+fn get_current_dir() -> OsString {
+    env::current_dir()
+        .expect("Failed to get current directory")
+        .into_os_string()
+}
+
+// fn get_duplicates(hash_map: &HashMap<Vec<u8>, Vec<String>>) -> Vec<Vec<String>> {
+//     hash_map.values()
+//         .filter(|files| files.len() > 1)
+//         .cloned()
+//         .collect()
+// }
+/*
+let dir = &args[1];
     
     let mut hash_map: HashMap<Vec<u8>, Vec<String>> = HashMap::new();
 
@@ -40,12 +86,6 @@ fn main() {
     for group in dup_files {
         println!("{:?}", group);
     }
-}
 
 
-fn get_duplicates(hash_map: &HashMap<Vec<u8>, Vec<String>>) -> Vec<Vec<String>> {
-    hash_map.values()
-        .filter(|files| files.len() > 1)
-        .cloned()
-        .collect()
-}
+*/
