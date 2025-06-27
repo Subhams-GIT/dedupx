@@ -1,6 +1,8 @@
 use clap::{Parser,ValueEnum};
 use std::env;
 use std::ffi::OsString;
+use std::collections::HashMap;
+mod find;
 
 #[derive(Debug, Clone, ValueEnum)]
 enum ScanLevel {
@@ -22,7 +24,7 @@ struct Args{
         short = 'f',
         long = "folder",
         help = "Directory to scan (default: current directory)",
-        default_value_os_t = get_current_dir()  // Use default_value_os_t
+        default_value_os_t = get_current_dir()  
     )]
     folder: OsString, 
 
@@ -31,18 +33,35 @@ struct Args{
 
     #[arg(short='s',long="speed",help="Scan speed: slow, medium, or fast",default_value="medium")]
     speed:Speed 
+
+
 }
+
+
 fn main() {
-    // let currentDir=env::current_dir().expect("failed to get current directory");
+    // let items=vec!["enter and find duplicate files","exit"];
+
+    // let selection = MultiSelect::new()
+    //     .with_prompt("What do you choose?")
+    //     .items(&items)
+    //     .interact()
+    //     .unwrap();
+
+    // println!("{:?}",selection);
     let args=Args::parse();
 
-    let dir=args.folder;
-    let speed=args.speed;
-    let scan=args.scan_level;
 
-    println!("{:?}",dir.into_string());
-    println!("{:?}",speed);
-    println!("{:?}",scan);
+    let dir=args.folder;
+    // let speed=args.speed;
+    // let scan=args.scan_level;
+
+    let hash_map=find::find(dir);
+
+    let dup_files = get_duplicates(&hash_map);
+    println!("Duplicate files:");
+    for group in dup_files {
+        println!("{:?}", group);
+    }
     
 }
 
@@ -52,40 +71,14 @@ fn get_current_dir() -> OsString {
         .into_os_string()
 }
 
-// fn get_duplicates(hash_map: &HashMap<Vec<u8>, Vec<String>>) -> Vec<Vec<String>> {
-//     hash_map.values()
-//         .filter(|files| files.len() > 1)
-//         .cloned()
-//         .collect()
-// }
-/*
-let dir = &args[1];
-    
-    let mut hash_map: HashMap<Vec<u8>, Vec<String>> = HashMap::new();
-
-    for entry in WalkDir::new(dir).into_iter().filter_map(Result::ok) {
-        let path = entry.path();
-        if path.is_file() {
-            let content = fs::read(path).unwrap_or_else(|_| {
-                eprintln!("Error reading file: {}", path.display());
-                process::exit(1);
-            });
-
-            let mut hasher = Sha256::new();
-            hasher.update(&content);
-            let hash = hasher.finalize().to_vec();
-
-            hash_map.entry(hash)
-                .or_insert_with(Vec::new)
-                .push(path.to_string_lossy().to_string());
-        }
+fn get_duplicates(hash_map: &Result<HashMap<Vec<u8>, Vec<String>>, std::io::Error>) -> Vec<Vec<String>> {
+    match hash_map {
+        Ok(map) => {
+            map.values()
+                .filter(|files| files.len() > 1)
+                .cloned()
+                .collect()
+        },
+        Err(_) => Vec::new(), 
     }
-
-    let dup_files = get_duplicates(&hash_map);
-    println!("Duplicate files:");
-    for group in dup_files {
-        println!("{:?}", group);
-    }
-
-
-*/
+}
