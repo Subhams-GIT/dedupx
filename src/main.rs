@@ -1,21 +1,28 @@
 use clap::{Parser,ValueEnum};
-use std::env;
+use std::{env};
 use std::ffi::OsString;
 use std::collections::HashMap;
 mod find;
-
-#[derive(Debug, Clone, ValueEnum)]
-enum ScanLevel {
-    QuickScan,
-    FullScan,
-    CustomScan,
-}
-
-#[derive(Debug,Clone,ValueEnum)]
+use inquire::{Select};
+use std::fmt;
+mod read;
+mod hash;
+#[derive(Debug,Clone,ValueEnum,PartialEq)]
 enum Speed{
     Slow,
     Medium,
     Fast
+}
+
+impl fmt::Display for Speed {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let label = match self {
+            Speed::Slow => "Slow",
+            Speed::Medium => "Medium",
+            Speed::Fast => "Fast",
+        };
+        write!(f, "{}", label)
+    }
 }
 
 #[derive(Parser)]
@@ -28,40 +35,43 @@ struct Args{
     )]
     folder: OsString, 
 
-    #[arg(short='l',long="level",help="quick-scan, full-scan, custom-scan",default_value="full-scan")]
-    scan_level: ScanLevel,
 
-    #[arg(short='s',long="speed",help="Scan speed: slow, medium, or fast",default_value="medium")]
-    speed:Speed 
-
+    #[arg(short = 's', long = "speed", help = "Scan speed")]
+    speed: Option<Speed>,
 
 }
 
 
-fn main() {
-    // let items=vec!["enter and find duplicate files","exit"];
-
-    // let selection = MultiSelect::new()
-    //     .with_prompt("What do you choose?")
-    //     .items(&items)
-    //     .interact()
-    //     .unwrap();
-
-    // println!("{:?}",selection);
+fn main(){
     let args=Args::parse();
-
-
     let dir=args.folder;
-    // let speed=args.speed;
-    // let scan=args.scan_level;
+    let skips = read::skips().unwrap_or_else(|_| {
+        println!("error in reading");
+        Vec::new()
+    });
+    let speed = args.speed.unwrap_or_else(|| {
+        Select::new("Choose speed:", vec![
+            Speed::Slow,
+            Speed::Medium,
+            Speed::Fast
+        ])
+        .prompt()
+        .expect("Prompt failed")
+    });
 
-    let hash_map=find::find(dir);
-
+   if speed.to_string()=="Slow" {
+    let hash_map=find::find(dir,skips,"sha256");
     let dup_files = get_duplicates(&hash_map);
-    println!("Duplicate files:");
-    for group in dup_files {
-        println!("{:?}", group);
-    }
+    println!("{:?}",dup_files);
+   } else if speed.to_string() == "Medium" {
+       let hash_map=find::find(dir,skips,"blake3");
+       let dup_files = get_duplicates(&hash_map);
+        println!("{:?}",dup_files);
+   } else{
+    let hash_map=find::find(dir,skips,"xxh3");
+    let dup_files = get_duplicates(&hash_map);
+     println!("{:?}",dup_files);
+   } 
     
 }
 

@@ -1,45 +1,58 @@
-use sha2::{Digest, Sha256};
-use std::ffi::OsString;
-use std::fs;
-use std::process;
+use rayon::prelude::*;
+use std::{
+    collections::HashMap,
+    ffi::OsString,
+    fs,
+    path::{PathBuf},
+    sync::{Arc, Mutex},
+};
 use walkdir::WalkDir;
-use std::collections::HashMap;
+use crate::hash;
+pub fn find(
+    dir: OsString,
+    skips: Vec<String>,
+    method:&str
+) -> Result<HashMap<Vec<u8>, Vec<String>>, std::io::Error> {
+   
+    let root = PathBuf::from(&dir);
+    let skip_set = skips; 
 
 
-pub fn find(dir: OsString)->Result<HashMap<Vec<u8>, Vec<String>>, std::io::Error>  {
-    let mut hash_map: HashMap<Vec<u8>, Vec<String>> = HashMap::new();
-    for entry in WalkDir::new(&dir).into_iter().filter_map(Result::ok) {
-		// let entry=entry?;
-        let path = entry.path();
+    let entries: Vec<PathBuf> = WalkDir::new(&root)
+        .into_iter()
+        .filter_map(Result::ok)
+        .filter(|entry| {
+            let rel_path = entry.path().strip_prefix(&root).unwrap_or(entry.path());
+            let rel_str = rel_path.to_string_lossy();
+            !skip_set.iter().any(|skip| rel_str.starts_with(skip))
+                && entry.file_type().is_file()
+        })
+        .map(|entry| entry.into_path())
+        .collect();
 
-		let metadata=match fs::metadata(path){
-			Ok(mt)=>mt,
-			Err(e) => {
-                eprintln!("Error reading metadata for {}: {}", path.display(), e);
-                continue;
+       
+    let hash_map = Arc::new(Mutex::new(HashMap::new()));
+
+    
+    entries.par_iter().for_each(|path| {
+        match fs::read(path) {
+            Ok(content) => {
+                
+                let hash =hash::hash_data(method, &content); 
+                let mut map = hash_map.lock().unwrap();
+                map.entry(hash)
+                    .or_insert_with(Vec::new)
+                    .push(path.to_string_lossy().to_string());
             }
-		};
-
-		if metadata.len()==0 {
-			// println!("{:?}",path);
-			continue;
-		}
-
-        else if path.is_file() {
-            let content = fs::read(path).unwrap_or_else(|_| {
-                eprintln!("Error reading file: {}", path.display());
-                process::exit(1);
-            });
-
-            let mut hasher = Sha256::new();
-            hasher.update(&content);
-            let hash = hasher.finalize().to_vec();
-
-            hash_map
-                .entry(hash)
-                .or_insert_with(Vec::new)
-                .push(path.to_string_lossy().to_string());
+            Err(e) => eprintln!("Failed to read {}: {}", path.display(), e),
         }
-    }
-	return Ok(hash_map);
+    });
+
+    
+    let final_map = Arc::try_unwrap(hash_map)
+        .unwrap()
+        .into_inner()
+        .unwrap();
+
+    Ok(final_map)
 }

@@ -9,4 +9,8 @@ clap = { version = "4.4", features = ["derive"] }
 sha2 = "=0.10.9"
 rayon = "1.10"
 fs_extra = "1.2.0"
-dialoguer="0.11.0"
+inquire="0.7.5"
+blake3="1.8.2"
+[dependencies.xxhash-rust]
+version = "0.8.5"
+features = ["xxh3", "const_xxh3"]
