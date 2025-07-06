@@ -5,7 +5,7 @@ use img_hash::{HasherConfig, HashAlg};
 use img_hash::image::load_from_memory;
 
 pub fn hash_data(algorithm: &str, data: &[u8]) -> Vec<u8>{
-    // println!("{:?}",algorithm);
+    
     match algorithm {
         "sha256" => {
             let mut hasher = Sha256::new();
