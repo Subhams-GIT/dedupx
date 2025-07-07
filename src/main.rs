@@ -6,8 +6,9 @@ mod getentries;
 mod hash;
 mod read;
 use std::io::Result;
-use std::path::{PathBuf,Path};
+use std::path::{PathBuf};
 use crate::delete::Quarantine;
+use inquire::{Select};
 
 fn main() -> Result<()> {
     let (dir, speed, typeof_file) = getconfig::get_config();
@@ -40,20 +41,26 @@ fn main() -> Result<()> {
             }
         },
     };
-
+    let option=Select::new("Choose whether you want to delete or quarantine", vec![
+            "delete",
+            "Quarantine",
+        ])
+        .prompt()
+        .expect("Prompt failed");
     
-    let quarantine = Quarantine::qdir()?;
+    let mut quarantine = Quarantine::qdir()?;
 
     let dup_paths: Vec<Vec<PathBuf>> = duplicate_files
         .into_iter()
         .map(|group| group.into_iter().map(PathBuf::from).collect())
         .collect();
-    println!(" dup paths{:?}",dup_paths);
-   
-    match quarantine.quarantine_duplicates(dup_paths) {
-        Ok(quarantined) => println!("Successfully quarantined files: {:?}", quarantined),
+    
+    
+    match quarantine.quarantine_duplicates(dup_paths,option) {
+        Ok(quarantined) => println!("successfully quarantined files: {:?}", quarantined),
         Err(e) => eprintln!("Failed to quarantine files: {}", e),
     }
+
 
     Ok(())
 }

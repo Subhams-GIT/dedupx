@@ -27,6 +27,8 @@ impl fmt::Display for Speed {
         write!(f, "{}", label)
     }
 }
+
+
 impl fmt::Display for TypeofFile {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let label = match self {
