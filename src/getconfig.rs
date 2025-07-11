@@ -34,11 +34,8 @@ pub struct Args{
     )]
     pub folder: OsString, 
 
-
     #[arg(short = 's', long = "speed", help = "Scan speed")]
     pub speed: Option<Speed>,
-
-    
 
 }
 
@@ -58,7 +55,9 @@ pub fn get_config()-> (OsString,Speed){
     });
 
 
+
 	return (dir,speed)
+
 }
 
 fn get_current_dir() -> OsString {

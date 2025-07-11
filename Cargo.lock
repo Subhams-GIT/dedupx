@@ -319,7 +319,10 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
+<<<<<<< HEAD
  "tempfile",
+=======
+>>>>>>> origin
  "walkdir",
  "xxhash-rust",
 ]
@@ -347,6 +350,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 
 [[package]]
+<<<<<<< HEAD
 name = "errno"
 version = "0.3.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -363,6 +367,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 
 [[package]]
+=======
+>>>>>>> origin
 name = "fs_extra"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -379,6 +385,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "getrandom"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -391,6 +398,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> origin
 name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -498,12 +507,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1171693293099992e19cddea4e8b849964e9846f4acee11b3948bcc337be8776"
 
 [[package]]
+<<<<<<< HEAD
 name = "linux-raw-sys"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cd945864f07fe9f5371a27ad7b52a172b4b499999f1d97574c9fa68373937e12"
 
 [[package]]
+=======
+>>>>>>> origin
 name = "lock_api"
 version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -533,7 +545,11 @@ checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
 dependencies = [
  "libc",
  "log",
+<<<<<<< HEAD
  "wasi 0.11.1+wasi-snapshot-preview1",
+=======
+ "wasi",
+>>>>>>> origin
  "windows-sys 0.48.0",
 ]
 
@@ -650,12 +666,15 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "r-efi"
 version = "5.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
 
 [[package]]
+=======
+>>>>>>> origin
 name = "rayon"
 version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -707,6 +726,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rustix"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -720,6 +740,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> origin
 name = "rustversion"
 version = "1.0.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -855,6 +877,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "tempfile"
 version = "3.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -868,6 +891,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> origin
 name = "thiserror"
 version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -956,6 +981,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
 
 [[package]]
+<<<<<<< HEAD
 name = "wasi"
 version = "0.14.2+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -965,6 +991,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> origin
 name = "wasm-bindgen"
 version = "0.2.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1252,6 +1280,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
 
 [[package]]
+<<<<<<< HEAD
 name = "wit-bindgen-rt"
 version = "0.39.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1261,6 +1290,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> origin
 name = "xxhash-rust"
 version = "0.8.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
