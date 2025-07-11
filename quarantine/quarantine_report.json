@@ -1,0 +1,953 @@
+{
+  "timestamp": "2025-07-11T07:43:51.655183280+00:00",
+  "quarantined_files": [
+    {
+      "og_path": "copy/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-07T04:12:13.188000915+00:00"
+    },
+    {
+      "og_path": "test3/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-07T06:42:04.183552237+00:00"
+    },
+    {
+      "og_path": "test2/test4 - Copy/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T05:14:32.132424995+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/copy/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.884710410+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/copy/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.884710410+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/remotes/origin/main",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "size": 41,
+      "timestamp": "2025-07-11T05:18:25.904986862+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/copy/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.884710410+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/remotes/origin/main",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "size": 41,
+      "timestamp": "2025-07-11T05:18:25.904986862+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test3/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.918594955+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/copy/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.884710410+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/remotes/origin/main",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "size": 41,
+      "timestamp": "2025-07-11T05:18:25.904986862+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test3/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.918594955+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.933903849+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T05:18:25.783007964+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.809406906+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.834422499+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/file1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.855738167+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.872051624+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/copy/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T05:18:25.884710410+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/remotes/origin/main",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "size": 41,
+      "timestamp": "2025-07-11T05:18:25.904986862+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test3/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.918594955+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.933903849+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T05:18:25.951065882+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.928227238+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.928227238+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.998193261+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.928227238+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.998193261+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:58.028186175+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.928227238+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.998193261+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:58.028186175+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T07:42:58.056625266+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.762496013+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.786381555+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/test2/test4/file.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "size": 19,
+      "timestamp": "2025-07-11T07:42:57.840304123+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.870938950+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.897303687+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.928227238+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:57.998193261+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/t3.txt",
+      "size": 5,
+      "timestamp": "2025-07-11T07:42:58.028186175+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "size": 0,
+      "timestamp": "2025-07-11T07:42:58.056625266+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/main",
+      "size": 41,
+      "timestamp": "2025-07-11T07:42:58.083749407+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.515959007+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.515959007+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.549031488+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.515959007+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.549031488+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.581420250+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.515959007+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.549031488+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.581420250+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.613343233+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/.git/refs/heads/main",
+      "q_path": "DELETED",
+      "size": 41,
+      "timestamp": "2025-07-11T07:43:51.379943262+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file3.txt",
+      "q_path": "DELETED",
+      "size": 0,
+      "timestamp": "2025-07-11T07:43:51.417442378+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.449336580+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "q_path": "DELETED",
+      "size": 19,
+      "timestamp": "2025-07-11T07:43:51.485162505+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t4.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.515959007+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.549031488+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/t2.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.581420250+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.613343233+00:00"
+    },
+    {
+      "og_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.txt",
+      "q_path": "DELETED",
+      "size": 5,
+      "timestamp": "2025-07-11T07:43:51.643424514+00:00"
+    }
+  ]
+}
