@@ -109,7 +109,7 @@ impl Quarantine {
                         println!("Warning: File {} does not exist, skipping", file.display());
                         continue;
                     }
-
+                    
                     match self.q_file(&file, option) {
                         Ok(path) => {
                             println!("Successfully processed: {}", file.display());

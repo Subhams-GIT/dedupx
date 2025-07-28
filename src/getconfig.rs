@@ -10,7 +10,12 @@ pub enum Speed{
     Medium,
     Fast
 }
-
+#[derive(Debug,Clone,ValueEnum,PartialEq)]
+pub enum Type{
+    Document,
+    Image,
+    Other
+}
 
 impl fmt::Display for Speed {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -18,6 +23,17 @@ impl fmt::Display for Speed {
             Speed::Slow => "Slow",
             Speed::Medium => "Medium",
             Speed::Fast => "Fast",
+        };
+        write!(f, "{}", label)
+    }
+}
+
+impl fmt::Display for Type {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let label = match self {
+            Type::Document => "Document",
+            Type::Image => "Image",
+            Type::Other => "Other",
         };
         write!(f, "{}", label)
     }
@@ -36,11 +52,14 @@ pub struct Args{
 
     #[arg(short = 's', long = "speed", help = "Scan speed")]
     pub speed: Option<Speed>,
+    
+    #[arg(short = 't', long = "type", help = "Type of file")]
+    pub file: Option<Type>,
 
 }
 
 
-pub fn get_config()-> (OsString,Speed){
+pub fn get_config()-> (OsString,Speed,Type){
     let args=Args::parse();
     let dir=args.folder;
 
@@ -54,9 +73,17 @@ pub fn get_config()-> (OsString,Speed){
         .expect("Prompt failed")
     });
 
+    let typeoffile = args.file.unwrap_or_else(|| {
+        Select::new("Choose Type of file :", vec![
+            Type::Document,
+            Type::Image,
+            Type::Other,
+        ])
+        .prompt()
+        .expect("Prompt failed")
+    });
 
-
-	return (dir,speed)
+	return (dir,speed,typeoffile)
 
 }
 

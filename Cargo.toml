@@ -15,6 +15,8 @@ serde = "1.0.219"
 chrono = "0.4.41"
 serde_json = "1.0.140"
 tempfile = "3.20.0"
+image = "0.25.6"
+imagehash = "0.3.0"
 [dependencies.img_hash]
 version = "3.0"
 [dependencies.xxhash-rust]

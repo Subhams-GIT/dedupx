@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-07-11T07:43:51.655183280+00:00",
-=======
-  "timestamp": "2025-07-07T06:42:04.186009018+00:00",
->>>>>>> origin
+  "timestamp": "2025-07-28T08:40:31.657620234+00:00",
   "quarantined_files": [
     {
       "og_path": "copy/t1.txt",
@@ -16,7 +12,6 @@
       "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file1.js",
       "size": 19,
       "timestamp": "2025-07-07T06:42:04.183552237+00:00"
-<<<<<<< HEAD
     },
     {
       "og_path": "test2/test4 - Copy/file.js",
@@ -953,8 +948,18 @@
       "q_path": "DELETED",
       "size": 5,
       "timestamp": "2025-07-11T07:43:51.643424514+00:00"
-=======
->>>>>>> origin
+    },
+    {
+      "og_path": "duplicate/file2.js",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/file2.js",
+      "size": 8,
+      "timestamp": "2025-07-12T12:58:03.220471282+00:00"
+    },
+    {
+      "og_path": "duplicate/Screenshot 2025-07-18 121954 (2).png",
+      "q_path": "/mnt/e/rust-internship/dedupx/quarantine/Screenshot 2025-07-18 121954 (2).png",
+      "size": 19816,
+      "timestamp": "2025-07-28T08:40:31.621479471+00:00"
     }
   ]
 }

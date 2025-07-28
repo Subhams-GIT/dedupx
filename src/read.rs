@@ -1,6 +1,7 @@
 use std::fs::File;
 use std::io::{self, BufRead};
 
+
 pub fn skips() -> io::Result<Vec<String>> {
     let path = ".gitignore";
     let file = File::open(path)?;
@@ -17,6 +18,6 @@ pub fn skips() -> io::Result<Vec<String>> {
             skip_list.push(line);
         }
     }
-
+    
     Ok(skip_list)
 }
